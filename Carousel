@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Insert the CSS from step 2 here */
+        .carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+.carousel-logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+    </style>
+</head>
+<body>
+    //<!-- Insert the HTML from step 1 here -->//
+<div class="carousel-container">
+    <div class="carousel">
+        <div class="carousel-track">
+            <!-- Repeat this for all your 32 logos -->
+            <img src="path-to-your-logo1.png" alt="Logo 1" class="carousel-logo">
+            <img src="path-to-your-logo2.png" alt="Logo 2" class="carousel-logo">
+            <!-- Add the rest of your logos here -->
+        </div>
+    </div>
+</div>
+
+<iframe src="carousel.html" width="100%" height="100" frameborder="0"></iframe>
+
+
+    <script>
+        // Insert the JavaScript from step 3 here (if you are using it)//
+        window.addEventListener('load', function() {
+    const track = document.querySelector('.carousel-track');
+    const logos = Array.from(track.children);
+
+    logos.forEach(logo => {
+        const clone = logo.cloneNode(true);
+        track.appendChild(clone);
+    });
+});
+
+    </script>
+</body>
+</html>
