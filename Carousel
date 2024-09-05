@@ -44,8 +44,8 @@
     <div class="carousel">
         <div class="carousel-track">
             <!-- Repeat this for all your 32 logos -->
-            <img src="path-to-your-logo1.png" alt="Logo 1" class="carousel-logo">
-            <img src="path-to-your-logo2.png" alt="Logo 2" class="carousel-logo">
+            <img src="https://drive.google.com/file/d/16LfbN5vnyBQ858lBerGIEZSlQI2RyTxv/view?usp=drive_link" alt="Logo 1" class="carousel-logo">
+            <img src="https://drive.google.com/file/d/1xrWGbvKYPA1XHv2t6leuEnUxWYjda1WM/view?usp=drive_link" alt="Logo 2" class="carousel-logo">
             <!-- Add the rest of your logos here -->
         </div>
     </div>
