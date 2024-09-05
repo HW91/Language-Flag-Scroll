@@ -4,38 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* CSS for the carousel */
-        .carousel-container {
-            width: 100%;
-            overflow: hidden;
-            position: relative;
-        }
+    /* CSS for the carousel */
+    html, body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-        .carousel {
-            display: flex;
-            width: 100%;
-        }
+    .carousel-container {
+        width: 80%; /* You can adjust this value as needed */
+        height: 100px; /* Adjust the height to fit your logos */
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-        .carousel-track {
-            display: flex;
-            animation: scroll 20s linear infinite;
-        }
+    .carousel {
+        display: flex;
+        width: 100%;
+    }
 
-        .carousel-logo {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-            flex-shrink: 0;
-        }
+    .carousel-track {
+        display: flex;
+        animation: scroll 20s linear infinite;
+    }
 
-        @keyframes scroll {
-            0% {
-                transform: translateX(0%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
+    .carousel-logo {
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0%);
         }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
     </style>
 </head>
 <body>
