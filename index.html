@@ -10,13 +10,10 @@
             overflow: hidden;
             position: relative;
         }
-        .carousel {
-            display: flex;
-            width: 100%;
-        }
 
         .carousel-track {
             display: flex;
+            width: max-content; /* Ensure the track's width is as wide as its content */
             animation: scroll 10s linear infinite;
         }
 
@@ -27,12 +24,13 @@
             flex-shrink: 0;
         }
 
+        /* Adjust the keyframes to create smooth, infinite scrolling */
         @keyframes scroll {
             0% {
-                transform: translateX(0%);
+                transform: translateX(0);
             }
             100% {
-                transform: translateX(-100%);
+                transform: translateX(-50%);
             }
         }
     </style>
@@ -42,23 +40,14 @@
     <div class="carousel-container">
         <div class="carousel">
             <div class="carousel-track">
-                <!-- Logos with proper Google Drive direct URLs -->
-                <img src="https://drive.google.com/uc?export=view&id=16LfbN5vnyBQ858lBerGIEZSlQI2RyTxv" alt=" " class="carousel-logo">
-                <img src="https://drive.google.com/uc?export=view&id=1xrWGbvKYPA1XHv2t6leuEnUxWYjda1WM" alt=" " class="carousel-logo">
-                <img src="https://drive.google.com/uc?export=view&id=1vm5EvC9vQCWmwnDAk9fquCfO24bEEHc2" alt=" " class="carousel-logo">
-                <img src="https://drive.google.com/uc?export=view&id=1xrWGbvKYPA1XHv2t6leuEnUxWYjda1WM" alt=" " class="carousel-logo">
-                <img src="https://drive.google.com/uc?export=view&id=16LfbN5vnyBQ858lBerGIEZSlQI2RyTxv" alt=" " class="carousel-logo">
-                <img src="https://drive.google.com/uc?export=view&id=1xrWGbvKYPA1XHv2t6leuEnUxWYjda1WM" alt=" " class="carousel-logo">
-                <img src="https://drive.google.com/uc?export=view&id=16LfbN5vnyBQ858lBerGIEZSlQI2RyTxv" alt=" " class="carousel-logo">
-                <img src="https://drive.google.com/uc?export=view&id=1xrWGbvKYPA1XHv2t6leuEnUxWYjda1WM" alt=" " class="carousel-logo">
-                <img src="https://drive.google.com/uc?export=view&id=16LfbN5vnyBQ858lBerGIEZSlQI2RyTxv" alt=" " class="carousel-logo">
-                <img src="https://drive.google.com/uc?export=view&id=1xrWGbvKYPA1XHv2t6leuEnUxWYjda1WM" alt=" " class="carousel-logo">
-                <img src="https://drive.google.com/uc?export=view&id=16LfbN5vnyBQ858lBerGIEZSlQI2RyTxv" alt=" " class="carousel-logo">
-                <img src="https://drive.google.com/uc?export=view&id=1xrWGbvKYPA1XHv2t6leuEnUxWYjda1WM" alt=" " class="carousel-logo">
-                <img src="https://drive.google.com/uc?export=view&id=16LfbN5vnyBQ858lBerGIEZSlQI2RyTxv" alt=" " class="carousel-logo">
-                <img src="https://drive.google.com/uc?export=view&id=1xrWGbvKYPA1XHv2t6leuEnUxWYjda1WM" alt=" " class="carousel-logo">
-                <img src="https://drive.google.com/uc?export=view&id=16LfbN5vnyBQ858lBerGIEZSlQI2RyTxv" alt=" " class="carousel-logo">
-                <!-- Add the rest of your logos with similar URLs here -->
+                <!-- Logos -->
+                <img src="https://drive.google.com/uc?export=view&id=16LfbN5vnyBQ858lBerGIEZSlQI2RyTxv" alt="Logo 1" class="carousel-logo">
+                <img src="https://drive.google.com/uc?export=view&id=1xrWGbvKYPA1XHv2t6leuEnUxWYjda1WM" alt="Logo 2" class="carousel-logo">
+                <img src="https://drive.google.com/uc?export=view&id=1vm5EvC9vQCWmwnDAk9fquCfO24bEEHc2" alt="Logo 3" class="carousel-logo">
+                <!-- Repeated logos to ensure continuity -->
+                <img src="https://drive.google.com/uc?export=view&id=16LfbN5vnyBQ858lBerGIEZSlQI2RyTxv" alt="Logo 1" class="carousel-logo">
+                <img src="https://drive.google.com/uc?export=view&id=1xrWGbvKYPA1XHv2t6leuEnUxWYjda1WM" alt="Logo 2" class="carousel-logo">
+                <img src="https://drive.google.com/uc?export=view&id=1vm5EvC9vQCWmwnDAk9fquCfO24bEEHc2" alt="Logo 3" class="carousel-logo">
             </div>
         </div>
     </div>
@@ -71,7 +60,7 @@
 
             logos.forEach(logo => {
                 const clone = logo.cloneNode(true);
-                track.appendChild(clone);
+                track.appendChild(clone); // Clone logos to create the illusion of infinite scrolling
             });
         });
     </script>
